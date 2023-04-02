@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/final/css/timercss.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="/final/css/sidemenu.css">
+    <script type="module" src="/final/js/timer.js" defer></script>
+    <script src="/final/js/sidemenu.js" defer></script>
+    
+    <title>Timer</title>
+
+
+</head>
+
+
+<body>
+    <header>
+        <a href="#" class="gnb-btn"><i class="fa-solid fa-bars"></i></a>
+        <nav id="gnb">
+            <a class="gnb-logo" href="/final/html/mainpage.html">
+                ⏰ 중앙 플래너 ⏰
+            </a>
+            <a class="gnb-close" href="#">
+                <i class="fa-solid fa-angle-left"></i>
+            </a>
+            <ul>
+                <li><a href="/final/html/schedule.html"><i class="fa-regular fa-calendar"></i><span>CALENDAR</span></a></li>
+                <li><a href="/final/html/todolist.html"><i class="fa-regular fa-square-check"></i><span>TODO LIST</span></a></li>
+                <li><a href="/final/html/timer.html"><i class="fa-regular fa-hourglass-half"></i><span>TIMER</span></a></li>
+                <li><a href="/final/html/readingList.html"><i class="fa-regular fa-bookmark"></i><span>READING LIST</span></a></li>
+            </ul>
+        </nav>
+        <div class="wrap">
+            <p>바로 넘어가려면 화면 아무곳이나 클릭해주세요 </p>
+            <!-- tutorials -->
+            <div class="tutorial1 invisible" id="tutorial1">
+                <p>tutorial 공부시간을 측정 해보세요 </p>
+
+                <p class="tutorial" style="text-decoration: underline;">다음으로 넘어가기</p>
+            </div>
+            <div class="tutorial2 invisible" id="tutorial2">
+                <p>설정을 눌러 d-day를 설정해주세요</p>
+                <p class="tutorial" style="text-decoration: underline;">다음으로 넘어가기</p>
+            </div> 
+            <div class="tutorial3" id="tutorial3">
+                <p>여기를 눌러<br>다른 카테고리로</p> 
+
+                <p class="tutorial" style="text-decoration: underline;">다음으로 넘어가기</p>
+            </div> 
+        </div>
+
+
+    </header>
+
+
+
+    <div class="timTimeSection">
+
+        <div class="timNowTime">
+            <h1>TIMER</h1>
+            <div>
+                <h2 id="clock"></h2>
+            </div>
+        </div>
+
+
+        <div class="timTimeSet">
+
+
+
+            <div class="timSection timDday">
+                <!-- D-DAY -->
+                <!-- d-day 설정. 숨기기, 설정 누르면 나타나기.   -->
+                <div class="timesetting">
+                    <input type="date" id="endday" class="displayBlock">
+                    <button id="ddaybtn" class="displayBlock">설정</button>
+                    <!-- 아이콘으로 설정 만들어주기  설정 아이콘 누르면 설정 태그가 나타나도록 -->
+                    <span id="timsettingIcon"> <i class=" fa fa-cog"></i></span>
+                </div>
+
+                <div>
+                    <p class="timDdayTitle">D-DAY COUNT</p>
+                    <p class="timDdayText"><span id="d-day"></span></p>
+                </div>
+
+
+            </div>
+            <div class="timSection timTimeUp">
+                <!-- TIMER -->
+                <div class="timesetting">
+
+                </div>
+                <div class="timRestTime">
+                    <p class="timTimeupTitle">TIMER</p>
+                    <p class="restTime">00 : 00</p>
+                    <!-- 숨겨놓기, 시간완료시 나타나기 -->
+                    <!-- <p class="timeUp">TIME UP!</p> -->
+
+                </div>
+                <div class="btnMin">
+                    <button class="tim25min">25min</button>
+                    <button class="tim5min">5min</button>
+                    <button class="tim1min">1min</button>
+                </div>
+            </div>
+            <div class="timSection  timLearningTime">
+                <div class="timesetting">
+
+                </div>
+                <!-- LEARNING TIME -->
+                <div>
+                    <p class="timTimeCountTitle">STOPWATCH</p>
+                    <p class="timRunning">
+                        00:00:00
+                    </p>
+                </div>
+                <div class="LearningTimebtn">
+                    <button class="LearningTimebtnStart">start</button>
+                    <button class="LearningTimebtnStop">stop</button>
+                    <button class="LearningTimebtnReset">reset</button>
+                </div>
+                <p class="todayRecord">
+                    오늘의 공부시간
+                </p>
+                <p class="timerRecord invisible" ><img id="kirby" src="../img/kirby.gif"><span id="timRecord"></span> </p>
+                <!-- 캘린더에 추가하기 메뉴 예정. -->
+                <!-- <button class="savingToCD">캘린더에 저장</button> -->
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
